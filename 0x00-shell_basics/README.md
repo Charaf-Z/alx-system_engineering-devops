@@ -8,3 +8,4 @@
 7-movethatfile  &rarr; A script to move file to a diferrent directory.
 8-firstdelete  &rarr; A script to delete file from directory.
 9-firstdirdeletion  &rarr;  A script to delete a directory not emty.
+10-back  &rarr; A script to go back to the previous directory.
