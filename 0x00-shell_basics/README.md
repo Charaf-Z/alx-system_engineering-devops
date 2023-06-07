@@ -11,3 +11,4 @@
 10-back  &rarr; A script to go back to the previous directory.
 11-lists  &rarr;  A script that lists all files in the current directory and the parent of the working directory and the /boot directory, in long forma.
 12-file_type  &rarr;  A script print the type of a file.
+13-symbolic_link  &rarr;  A script to create a symbolic link.
