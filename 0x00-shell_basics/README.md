@@ -6,3 +6,4 @@
 5-listfilesdigitonly  &rarr; A Script to display current directory contents.
 6-firstdirectory  &rarr;  A script to create a directory named my_firs_directory inside the /tem directory.
 7-movethatfile  &rarr; A script to move file to a diferrent directory.
+8-firstdelete  &rarr; A script to delete file from directory.
