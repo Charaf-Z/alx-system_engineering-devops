@@ -16,3 +16,4 @@
 100-lets_move  &rarr; A script that moves all files beginning with an uppercase letter to a directory .
 101-clean_emacs  &rarr; A script that deletes all files in the current working directory that end with the character ~.
 102-tree  &rarr;  A script to create a tree of direcotries.
+103-commas  &rarr; A script to list all the files and sub directories with specific conditions.
