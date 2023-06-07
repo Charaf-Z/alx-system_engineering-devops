@@ -9,4 +9,5 @@
 8-firstdelete  &rarr; A script to delete file from directory.
 9-firstdirdeletion  &rarr;  A script to delete a directory not emty.
 10-back  &rarr; A script to go back to the previous directory.
-11-lists  &rarr;  A script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
+11-lists  &rarr;  A script that lists all files in the current directory and the parent of the working directory and the /boot directory, in long forma.
+12-file_type  &rarr;  A script print the type of a file.
