@@ -13,3 +13,4 @@
 12-file_type  &rarr;  A script print the type of a file.
 13-symbolic_link  &rarr;  A script to create a symbolic link.
 14-copy_html  &rarr;  A script to copy all the HTML files to the parent directory, but only that did not exist.
+100-lets_move  &rarr; A script that moves all files beginning with an uppercase letter to a directory .
