@@ -15,3 +15,4 @@
 14-copy_html  &rarr;  A script to copy all the HTML files to the parent directory, but only that did not exist.
 100-lets_move  &rarr; A script that moves all files beginning with an uppercase letter to a directory .
 101-clean_emacs  &rarr; A script that deletes all files in the current working directory that end with the character ~.
+102-tree  &rarr;  A script to create a tree of direcotries.
