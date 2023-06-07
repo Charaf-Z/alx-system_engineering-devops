@@ -12,3 +12,4 @@
 11-lists  &rarr;  A script that lists all files in the current directory and the parent of the working directory and the /boot directory, in long forma.
 12-file_type  &rarr;  A script print the type of a file.
 13-symbolic_link  &rarr;  A script to create a symbolic link.
+14-copy_html  &rarr;  A script to copy all the HTML files to the parent directory, but only that did not exist.
