@@ -5,3 +5,4 @@
 4-listmorefiles  &rarr;  A script to display current directory contents, including hidden files (starting with .). Use the long format.
 5-listfilesdigitonly  &rarr; A Script to display current directory contents.
 6-firstdirectory  &rarr;  A script to create a directory named my_firs_directory inside the /tem directory.
+7-movethatfile  &rarr; A script to move file to a diferrent directory.
