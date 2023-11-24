@@ -19,7 +19,7 @@
 
 start() {
 	./manage_my_process &
-	echo "$$" > /var/run/my_process.pid
+	echo "$!" > /var/run/my_process.pid
 	if [ "$1" -eq 1 ]; then echo "manage_my_process started"; fi
 }
 
@@ -36,8 +36,8 @@ restart() {
 }
 
 case "$1" in
-	start) start 1;;
-	stop) stop 1;;
+	start) start 1 ;;
+	stop) stop 1 ;;
 	restart) restart ;;
-	*) echo "Usage: manage_my_process {start|stop|restart}";;
+	*) echo "Usage: manage_my_process {start|stop|restart}" ;;
 esac
