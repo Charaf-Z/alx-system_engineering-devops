@@ -1,10 +1,9 @@
 # Using Puppet, install flask from pip3
 
-file { 'school':
-  path    => '/tmp/school',
-  ensure  => 'present',
-  content => 'I love Puppet',
+file { '/tmp/school':
+  ensure  => 'file',
   group   => 'www-data',
-  mode    => '0744',
   owner   => 'www-data',
+  mode    => '0744',
+  content => 'I love Puppet',
 }
