@@ -1,4 +1,4 @@
-# Create file in /tmp
+# Using Puppet, install flask from pip3
 
 file { 'school':
   path    => '/tmp/school',
