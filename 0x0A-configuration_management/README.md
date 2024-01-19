@@ -1,6 +1,6 @@
 # 0x0A. Configuration management
 
-## Tasks:
+## Tasks
 
 0. Using Puppet, create a file in `/tmp`.
 1. Using Puppet, install `flask` from `pip3`.
