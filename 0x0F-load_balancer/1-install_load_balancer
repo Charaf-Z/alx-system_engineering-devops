@@ -12,36 +12,6 @@ sudo chown "$USER":"$USER" /etc/default/haproxy
 echo "ENABLED=1" >> /etc/default/haproxy
 sudo cp /etc/haproxy/haproxy.cfg{,.original}
 
-echo "global
-    log 127.0.0.1 local0 notice
-    maxconn 2000
-    user haproxy
-    group haproxy
-
-defaults
-    log    global
-    mode   http
-    option httplog
-    option dontlognull
-    retries 3
-    option redispatch
-    timeout connect 5000
-    timeout client  50000
-    timeout server  50000
-
-listen stats
-    bind *:80
-    mode http
-    stats enable
-    stats uri /haproxy?stats
-    balance roundrobin
-    option httpclose
-    option forwardfor
-    http-response set-header Connection keep-alive
-    server web-01 18.234.129.123:80 check
-    server web-02 52.3.244.13:80 check
-" > /etc/haproxy/haproxy.cfg
+sudo sed -i '/504.http/a \\nlisten http-in\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\tserver web-01 18.234.129.123:80 check\n\tserver web-02 52.3.244.13:80 check' /etc/haproxy/haproxy.cfg
 
 sudo service haproxy start
-sudo systemctl enable haproxy.service
-sudo systemctl restart haproxy.service
