@@ -12,10 +12,10 @@ def top_ten(subreddit):
         subreddit (str): The name of the subreddit.
     """
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    header = {"User-Agent": "Alx:0x16.api.advanced"}
+    header = {"user-agent": "alx:0x16.api.advanced:v1.0.0"}
     param = {"limit": 10}
     response = get(url, headers=header, params=param, allow_redirects=False)
-    if response.status_code == 404:
+    if response.status_code != 200:
         print("None")
         return
     posts = response.json().get("data")
