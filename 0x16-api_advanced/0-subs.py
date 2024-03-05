@@ -15,7 +15,10 @@ def number_of_subscribers(subreddit):
         int: The number of subscribers of the subreddit.
     """
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {"user-agent": "alx:api.reddit.sub:v1.0"}
+    headers = {
+        "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0)\
+        Gecko/20100101 Firefox/50.0"
+    }
     response = requests.get(url, headers=headers, allow_redirects=False)
     if response.status_code != 200:
         return 0
