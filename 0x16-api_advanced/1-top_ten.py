@@ -12,7 +12,7 @@ def top_ten(subreddit):
         subreddit (str): The name of the subreddit.
     """
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    header = {"user-agent": "alx:0x16.api.advanced:v1.0.0"}
+    header = {"user-agent": "Webkit:api.advanced:v1.0.0 Htk like Gecko"}
     param = {"limit": 10}
     response = get(url, headers=header, params=param, allow_redirects=False)
     if response.status_code != 200:

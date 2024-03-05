@@ -17,7 +17,7 @@ def count_words(subreddit, word_list, instances={}, after="", count=0):
         count (int, optional): Total number of posts processed.
     """
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    header = {"user-agent": "alx:0x16.api.advanced:v1.0.0"}
+    header = {"user-agent": "Mozilla CPU iPhone OS 16_6 like Mac OS X"}
     param = {"limit": 100, "after": after, "count": count}
     response = get(url, headers=header, params=param, allow_redirects=False)
     try:
