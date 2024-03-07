@@ -12,10 +12,17 @@ def top_ten(subreddit):
         subreddit (str): The name of the subreddit.
     """
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    header = {"user-agent": "Webkit:api.advanced:v1.0.0 Htk like Gecko"}
+    header = {"user-agent": "MyApi/0.0.1"}
     param = {"limit": 10}
-    response = get(url, headers=header, params=param, allow_redirects=False)
-    if response.status_code != 200:
-        return print("None")
-    posts = response.json().get("data")
-    [print(post.get("data").get("title")) for post in posts.get("children")]
+    try:
+        response = get(
+            url, headers=header, params=param, allow_redirects=False
+        )
+        response.raise_for_status()
+        posts = response.json().get("data")
+        [
+            print(post.get("data").get("title"))
+            for post in posts.get("children")
+        ]
+    except Exception:
+        print("None")
