@@ -19,10 +19,11 @@ def top_ten(subreddit):
             url, headers=header, params=param, allow_redirects=False
         )
         response.raise_for_status()
-        posts = response.json().get("data")
-        [
-            print(post.get("data").get("title"))
-            for post in posts.get("children")
-        ]
+        data = response.json()
+        if "data" in data and "children" in data["data"]:
+            posts = data["data"]["children"]
+            [print(post.get("data").get("title")) for post in posts]
+        else:
+            print("None")
     except Exception:
         print("None")
