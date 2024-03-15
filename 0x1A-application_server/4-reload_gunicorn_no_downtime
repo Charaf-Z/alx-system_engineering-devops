@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
-# Stop the old Gunicorn process gracefully
-kill -s HUP "$(cat /tmp/gunicorn.pid)"
-
-# Start a new Gunicorn process
-/home/vagrant/AirBnB_clone_v4/bin/gunicorn --bind 0.0.0.0:8001 --workers 4 web_flask.0-hello_route:app --pid /tmp/gunicorn.pid
-
+# Gracefully reloads Gunicorn.
+pgrep gunicorn | awk '{ print $2 }' | xargs kill -HUP
