@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Gracefully reload gunicorn
-pgrep gunicorn | xargs kill -s HUP "$MAINPID"
+pgrep gunicorn | xargs kill -HUP
