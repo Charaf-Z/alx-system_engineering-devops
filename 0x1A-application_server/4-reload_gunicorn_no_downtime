@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Stop the old Gunicorn process gracefully
 kill -s HUP $(cat /tmp/gunicorn.pid)
 
