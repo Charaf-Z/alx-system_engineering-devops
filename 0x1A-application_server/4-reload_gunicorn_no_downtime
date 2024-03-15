@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-# Gracefully reloads Gunicorn.
-PIDS=$(pgrep gunicorn)
-if [ -z "$PIDS" ]; then
-  exit 1
+# Gracefully reload gunicorn
+if pgrep gunicorn > /dev/null 2>&1; then
+  pgrep gunicorn | xargs kill -HUP
 fi
-for PID in $PIDS; do 
-  kill -HUP "$PID"
-done
